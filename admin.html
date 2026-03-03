@@ -96,16 +96,21 @@
   .login-hint{font-size:0.62rem;color:var(--text-muted);margin-top:1rem;letter-spacing:0.05em;}
 
   /* Sidebar */
-#sidebar{
-  position: fixed;
-  top: 60px;
+#sidebar {
+  position: fixed;   /* better for toggle sidebars */
+  top: 0;
   left: 0;
   width: 240px;
-  height: calc(100vh - 60px); /* or 100dvh */
+  height: 100vh;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
   overflow-y: auto;
   overflow-x: hidden;
-}  
-  .sidebar-header{
+  transition: transform 0.3s ease;
+}
+  transition-header{
     padding:1.5rem;
     border-bottom:1px solid var(--border);
   }
@@ -1556,6 +1561,7 @@ document.querySelectorAll('.nav-item').forEach(item => {
 </script>
 </body>
 </html>
+
 
 
 
