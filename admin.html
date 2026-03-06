@@ -96,22 +96,21 @@
   .login-hint{font-size:0.62rem;color:var(--text-muted);margin-top:1rem;letter-spacing:0.05em;}
 
   /* Sidebar */
-#sidebar{
-  width:240px;
-  min-width:240px;
-  background:var(--surface);
-  border-right:1px solid var(--border);
-  display:flex;
-  flex-direction:column;
-  height:100vh;
-  overflow-y:scroll;
-  overflow-x:hidden;
-  position:sticky;
-  top:0;
-}
-  transition-header{
+      /* Sidebar */
+  #sidebar{
+    width:240px;
+    min-width:240px;
+    background:var(--surface);
+    border-right:1px solid var(--border);
+    display:flex;
+    flex-direction:column;
+    height:100vh;
+    overflow:hidden;
+  }
+  .sidebar-header{
     padding:1.5rem;
     border-bottom:1px solid var(--border);
+    flex-shrink:0;
   }
   .sidebar-logo{
     font-family:'Syne',sans-serif;
@@ -121,7 +120,12 @@
     letter-spacing:0.05em;
   }
   .sidebar-sub{font-size:0.6rem;color:var(--text-muted);margin-top:0.2rem;letter-spacing:0.1em;}
-  .sidebar-nav{flex:1;padding:1rem 0;}
+  .sidebar-nav{
+    flex:1;
+    padding:1rem 0;
+    overflow-y:auto;
+    overflow-x:hidden;
+  }
   .nav-section{
     font-size:0.55rem;
     letter-spacing:0.2em;
@@ -155,6 +159,7 @@
   .sidebar-footer{
     padding:1.5rem;
     border-top:1px solid var(--border);
+    flex-shrink:0;
   }
   .sidebar-user{
     display:flex;align-items:center;gap:0.8rem;
@@ -192,14 +197,13 @@
     height:100vh;
   }
   .topbar{
-    position:position:fixed;top:0;left:0;right:0;
+    position:sticky;top:0, right:0, left:0;
     background:rgba(10,10,10,0.95);
     backdrop-filter:blur(10px);
     border-bottom:1px solid var(--border);
     padding:1rem 2rem;
-      height: 10px
     display:flex;align-items:center;justify-content:space-between;
-    z-index:100;
+    z-index:50;
   }
   .topbar-title{
     font-family:'Syne',sans-serif;
@@ -226,7 +230,6 @@
     color:#000;font-weight:700;
   }
   .tb-btn-primary:hover{background:#fff;border-color:#fff;color:#000;}
-
   /* Page sections */
   .page{display:none;padding:2rem;}
   .page.active{display:block;}
@@ -1561,6 +1564,7 @@ document.querySelectorAll('.nav-item').forEach(item => {
 </script>
 </body>
 </html>
+
 
 
 
