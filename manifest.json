@@ -2,7 +2,7 @@
   "name": "DA Portfolio",
   "short_name": "DA Portfolio",
   "description": "Data Analyst Portfolio",
-  "start_url": "/index.html",
+  "start_url": "/Portfolio/index.html",
   "display": "standalone",
   "background_color": "#141414",
   "theme_color": "#f5a623",
